@@ -1,0 +1,17 @@
+### 
+###
+###
+
+### Create a container with below commands
+
+### Create Directory in the hosts
+mkdir /data/Docker/httpd8082/htdocs
+
+### Create a HTML file to be open by the user
+### Note: Ensure the file is in HTML format
+ 
+cd /data/Docker/httpd8082/htdocs
+vi index.html
+
+### Create container 
+docker run -p 8082:80 -v /data/Docker/httpd8082/htdocs:/usr/local/apache2/htdocs --name=myhttpd8082 --detach httpd 
