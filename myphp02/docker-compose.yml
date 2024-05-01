@@ -1,0 +1,16 @@
+version: '3'
+services:
+
+  php_con01:
+    image: php
+    container_name: php_con01
+    volumes:
+      - ./:/var/www/html
+    ports:
+      - "8080:80"
+      - "443:443"
+
+networks:
+  frontend:
+    # Use a custom driver
+    driver: bridge
